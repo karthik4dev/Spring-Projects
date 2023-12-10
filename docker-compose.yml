@@ -24,6 +24,20 @@ services: #Specifies the micro-service you want to run
       - db:db
     environment: #Specifies the environment variables
       - AWS_ACCESS_KEY=123456
+      - spring.datasource.hikari.
       - spring.datasource.hikari.jdbc-url=jdbc:mysql://db:3306/book_application?autoReconnect=true
       - spring.datasource.hikari.username=root
       - spring.datasource.hikari.password=root
+      - spring.datasource.username=application_user
+      - spring.datasource.password=application123!
+
+  monitor:
+    image: prom/prometheus:latest
+    ports: ["9090:9090"]
+    hostname: monitor
+    volumes:
+      - ./BooksRepository/src/main/resources/prometheus.yml:/etc/prometheus/prometheus.yml
+    depends_on: #Specifies that this container should start up after mysql is build and has started
+      - web
+      - db
+    tty: true
