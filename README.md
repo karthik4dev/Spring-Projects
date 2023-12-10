@@ -10,7 +10,7 @@
 [X] Prometheus.  
 
 This application is still in development. 
-###P roposed final date : 10-Jan-2023
+### Proposed final date : 10-Jan-2023
 
 # prerequisite:
 - JDK 18
