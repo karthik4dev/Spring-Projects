@@ -3,11 +3,11 @@
 ## This is example application to learn how Docker can be used to wrap 3 microservices i.e, Spring Application, MySQL and Prometheus 
 
 ## Checklist:
-[X] Spring REST Methods
-[X] Spring Actuator
-[X] Spring JPA
-[] Spring Security
-[X] Prometheus
+[X] Spring REST Methods.  
+[X] Spring Actuator.  
+[X] Spring JPA.  
+[] Spring Security.  
+[X] Prometheus.  
 
 This application is still in development. 
 ###P roposed final date : 10-Jan-2023
