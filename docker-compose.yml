@@ -33,6 +33,13 @@ services: #Specifies the micro-service you want to run
       - spring.datasource.username=application_user
       - spring.datasource.password=application123!
       - logging.file.path = /logs
+      - springdoc.swagger-ui.path=/swagger-ui
+      - springdoc.api-docs.version=openapi_3_1
+      - springdoc.swagger-ui.url=/swagger-ui
+      - springdoc.show-login-endpoint=true
+      - springdoc.use-management-port=true
+      - management.server.port=8002
+      - springdoc.api-docs.path=../../../
 
   monitor:
     image: prom/prometheus:latest
